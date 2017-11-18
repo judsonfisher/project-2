@@ -22,3 +22,10 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+
+// TO DO:
+// - Create front end that can receive data from db
+// - Create front end JS files that execute requests once buttons are clicked
+// - Link HTML routes to those commands
+// - Hardcode DB to app and talk to TAs when time to deploy
