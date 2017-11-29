@@ -11,11 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use(express.static("public"));
+app.use(express.static("app/public"));
 
 require("./app/routes/html-routes.js")(app);
 require("./app/routes/api-routes.js")(app);
-
 
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
