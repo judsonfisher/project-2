@@ -61,7 +61,7 @@ console.log("working");
 
       $("#temp").append(currentTempRounded + "°F");
       $("#cloudiness").append(cloudiness);
-      $("#icon").append("<img src=" + iconLink + "/>");
+      $("#icon").append("<img src=" + iconLink + ">");
       $("#high").append("High<br>" + highTempRounded + "°F");
       $("#low").append("Low<br>" + lowTempRounded + "°F");
       $("#sunrise").append("Sunrise: " + sunriseTime);
@@ -78,10 +78,9 @@ console.log("working");
 
   // END OF HOME PAGE AJAX CALL
 
- // var resultContainer = $(".result-container");
- // var search = $("#newsInput");
+var search = $("#newsInput");
  
- $("#search").on("click", function {
+ $("#search").on("click", function() {
   var searched = $("#newsInput").val().trim();
   searched = searched.replace(/\s+/g, "").toLowerCase();
   getData();
@@ -97,3 +96,6 @@ function getData() {
 function insertData() {
  // Create code to insert titles/imgs into exisiting structures
 };
+
+
+});
