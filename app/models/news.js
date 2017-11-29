@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-	var News = sequelize.define("News", {
+	var Articles = sequelize.define("News", {
 		published: {
 			type: DataTypes.STRING,
 			allowNull: true,
@@ -30,5 +30,5 @@ module.exports = function(sequelize, DataTypes) {
 	    }
 	});
 
-	return News;
+	return Articles;
 };

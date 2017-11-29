@@ -13,8 +13,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("public"));
 
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./app/routes/html-routes.js")(app);
+require("./app/routes/api-routes.js")(app);
 
 
 db.sequelize.sync({ force: true }).then(function() {
