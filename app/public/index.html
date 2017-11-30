@@ -1,4 +1,3 @@
-OCTYPE html>
 <html lang="en">
 <head>
 
@@ -12,7 +11,7 @@ OCTYPE html>
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Cormorant+SC" rel="stylesheet">
 
-	<link rel="stylesheet" href="./css/test.css" type="text/css" />
+	<link rel="stylesheet" href="./css/style.css" type="text/css" />
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -67,6 +66,8 @@ OCTYPE html>
 					<li><a href="" class="nav-link">Local</a></li>
 					<li><a href="" class="nav-link">Business</a></li>
 					<li><a href="" class="nav-link">Entertainment</a></li>
+					<li><a href="" class="nav-link">Tech</a></li>
+					<li><a href="" class="nav-link">Health</a></li>
 				</ul>
 
 			</div>
@@ -77,124 +78,58 @@ OCTYPE html>
 
 </nav>
 
-	<div class="row main">
+<div class="row main">
 
-		<div class="main-section col s9">
+	<div class="main-section col s9">
 
-			<div class="row">
+		<div class="row">
 
-		        <div class="search input-field col s6 offset-s3">
+	        <div class="search input-field col s6 offset-s3">
 
-		        	<i class="material-icons prefix">search</i>
+	        	<i class="material-icons prefix">search</i>
 
-		          	<input id="icon_prefix" type="text" class="validate">
-		          	<label for="icon_prefix">Search...</label>
+	          	<input id="icon_prefix" type="text" class="validate">
+	          	<label for="icon_prefix">Search...</label>
 
-		        </div>
+	        </div>
 
-		    </div>
+	    </div>
 
-		    <div class="row">
+	    <div class="row">
 
-		    	<div class="col s12">
+	    	<div class="col s12">
 
-		    		<p class="top-articles">Top Articles:</p>
+	    		<p class="top-articles">Top Articles:</p>
 
-		    	</div>
+	    	</div>
 
-		    </div>
+	    </div>
 
-			<div class="row">
+		<div class="row">
 
-				<div class="col s6 article">
+			<div class="col s6 article">
 
-					<img class="main-image" src="./images/bike.jpg">
-	
-					<h5 class="article-title">Study: 90% Of Bike Accidents Preventable By Buying Car Like A Normal Person</h5>
+				<img class="main-image" src="./images/bike.jpg">
 
-					<div class="share-social">
+				<h5 class="col s10 offset-s1 article-title">Study: 90% Of Bike Accidents Preventable By Buying Car Like A Normal Person</h5>
 
-						<img class="share" src="./images/fbshare.png">
+				<div class="col s3 offset-s9">
 
-					</div>
-
-				</div>
-
-				<div class="col s6 article">
-
-					<img class="main-image" src="./images/trump.jpg">
-	
-					<h5 class="article-title">Trump Privately Terrified His Sexual Assault Victims Will Someday Come Forward</h5>
-
-					<div class="share-social">
-
-						<img class="share" src="./images/fbshare.png">
-
-					</div>
+					<img class="share" src="./images/fbshare.png">
 
 				</div>
 
 			</div>
 
-			<div class="row">
+			<div class="col s6 article">
 
-				<div class="col s6 article">
+				<img class="main-image" src="./images/trump.jpg">
 
-					<img class="main-image" src="./images/roy.jpg">
-	
-					<h5 class="article-title">Roy Moore Under Fire For New 'Children Are My Future' Ad Campaign</h5>
+				<h5 class="col s10 offset-s1 article-title">Trump Privately Terrified His Sexual Assault Victims Will Someday Come Forward</h5>
 
-					<div class="share-social">
+				<div class="col s3 offset-s9">
 
-						<img class="share" src="./images/fbshare.png">
-
-					</div>
-
-				</div>
-
-				<div class="col s6 article">
-
-					<img class="main-image" src="./images/family.jpg">
-	
-					<h5 class="article-title">Parents Gently Explain To Son Why Family Dog Had To Be Blown Up With Dynamite</h5>
-
-					<div class="share-social">
-
-						<img class="share" src="./images/fbshare.png">
-
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class="row">
-
-				<div class="col s6 article">
-
-					<img class="main-image" src="./images/abducted.jpg">
-	
-					<h5 class="article-title">Man At Job Interview Praying He Isn’t Asked About 2-Year Gap In Résumé When He Was Abducted By Aliens</h5>
-
-					<div class="share-social">
-
-						<img class="share" src="./images/fbshare.png">
-
-					</div>
-
-				</div>
-
-				<div class="col s6 article">
-
-					<img class="main-image" src="./images/manwithdog.jpg">
-	
-					<h5 class="article-title">Frustrated Man Can’t Believe He Can Still Hear Construction Worker Hammering His Wife At This Hour</h5>
-
-					<div class="share-social">
-
-						<img class="share" src="./images/fbshare.png">
-
-					</div>
+					<img class="share" src="./images/fbshare.png">
 
 				</div>
 
@@ -202,65 +137,31 @@ OCTYPE html>
 
 		</div>
 
-		<div class="col s3">
+		<div class="row">
 
-			<div class="row">
+			<div class="col s6 article">
 
-				<div class="col s12">
+				<img class="main-image" src="./images/roy.jpg">
 
-					<div id="temp" class="temp"></div>
+				<h5 class="col s10 offset-s1 article-title">Roy Moore Under Fire For New 'Children Are My Future' Ad Campaign</h5>
 
-				</div>
+				<div class="col s3 offset-s9">
 
-			</div>
-
-			<div class="row">
-
-				<div class="col s12">
-
-					<div id="cloudiness" class="cloudiness"></div>
+					<img class="share" src="./images/fbshare.png">
 
 				</div>
 
 			</div>
 
-			<div class="row">
+			<div class="col s6 article">
 
-				<div class="col s12">
+				<img class="main-image" src="./images/family.jpg">
 
-					<div id="icon" class="icon"></div>
+				<h5 class="col s10 offset-s1 article-title">Parents Gently Explain To Son Why Family Dog Had To Be Blown Up With Dynamite</h5>
 
-				</div>
+				<div class="col s3 offset-s9">
 
-			</div>
-
-			<div class="row">
-
-				<div class="col s6">
-
-					<div id="high" class="highTemp"></div>
-
-				</div>
-
-				<div class="col s6">
-
-					<div id="low" class="lowTemp"></div>
-
-				</div>
-
-			</div>
-
-			<div class="row">
-
-				<div class="col s12">
-
-					<ul>
-						<li id="sunrise" class="subWeather"></li>
-						<li id="sunset" class="subWeather"></li>
-						<li id="humidity" class="subWeather"></li>
-						<li id="windSpeed" class="subWeather"></li>
-						<li id="visibility" class="subWeather"></li>
-					</ul>
+					<img class="share" src="./images/fbshare.png">
 
 				</div>
 
@@ -268,8 +169,164 @@ OCTYPE html>
 
 		</div>
 
-	<!-- Closes Row -->
+		<div class="row">
+
+			<div class="col s6 article">
+
+				<img class="main-image" src="./images/abducted.jpg">
+
+				<h5 class="col s10 offset-s1 article-title">Man At Job Interview Praying He Isn’t Asked About 2-Year Gap In Résumé When He Was Abducted By Aliens</h5>
+
+				<div class="col s3 offset-s9">
+
+					<img class="share" src="./images/fbshare.png">
+
+				</div>
+
+			</div>
+
+			<div class="col s6 article">
+
+				<img class="main-image" src="./images/manwithdog.jpg">
+
+				<h5 class="col s10 offset-s1 article-title">Frustrated Man Can’t Believe He Can Still Hear Construction Worker Hammering His Wife At This Hour</h5>
+
+				<div class="col s3 offset-s9">
+
+					<img class="share" src="./images/fbshare.png">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<ul class="pagination">
+				    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+				    <li class="active"><a href="#!">1</a></li>
+				    <li class="waves-effect"><a href="#!">2</a></li>
+				    <li class="waves-effect"><a href="#!">3</a></li>
+				    <li class="waves-effect"><a href="#!">4</a></li>
+				    <li class="waves-effect"><a href="#!">5</a></li>
+				    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+				</ul>
+
+			</div>
+
+		</div>
+
 	</div>
+
+	<div class="col s3">
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<div id="temp" class="temp"></div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<div id="cloudiness" class="cloudiness"></div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<div id="icon" class="icon"></div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col s6">
+
+				<div id="high" class="highTemp"></div>
+
+			</div>
+
+			<div class="col s6">
+
+				<div id="low" class="lowTemp"></div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<ul>
+					<li id="sunrise" class="subWeather"></li>
+					<li id="sunset" class="subWeather"></li>
+					<li id="humidity" class="subWeather"></li>
+					<li id="windSpeed" class="subWeather"></li>
+					<li id="visibility" class="subWeather"></li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<hr>
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<img class="ad" src="./images/Entertainment.png">
+
+				<p class="col s10 offset-s1 ad-title">Grammy's 2018: White men shut out spurs feelings</p>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<img class="ad" src="./images/Airbnb.png">
+
+				<p class="col s10 offset-s1 ad-title">Airbnb now lets you split the cost of rentals</p>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col s12">
+
+				<img class="ad" src="./images/Yeti.png">
+
+				<p class="col s10 offset-s1 ad-title">Science solves the mystery of the elusive Yeti</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<!-- Closes Row -->
+</div>
 
 <footer class="page-footer">
 
@@ -327,7 +384,7 @@ OCTYPE html>
 
 </footer>
 
-<script type="text/javascript" src="./js/test.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
 
 </body>
 </html>
