@@ -7,7 +7,11 @@ module.exports = function(sequelize, DataTypes) {
     body: {
       type: DataTypes.TEXT,
       allowNull: false,
-    }
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
 
   Post.associate = function(models) {
