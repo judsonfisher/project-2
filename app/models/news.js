@@ -1,5 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
+<<<<<<< HEAD
 	var Articles = sequelize.define("articles", {
+=======
+	var Articles = sequelize.define("News", {
+>>>>>>> master
 		published: {
 			type: DataTypes.STRING,
 			allowNull: true,
