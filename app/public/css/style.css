@@ -92,6 +92,12 @@ nav {
 	font-size: 23px;
 }
 
+.result-title {
+	text-align: center;
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+
 .main-image {
 	height: 270px;
 	display: block;
