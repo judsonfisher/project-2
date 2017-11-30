@@ -12,11 +12,19 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("app/public"));
+<<<<<<< HEAD
 
 require("./app/routes/html-routes.js")(app);
 require("./app/routes/api-routes.js")(app);
 
 db.sequelize.sync({force: true}).then(function() {
+=======
+
+require("./app/routes/html-routes.js")(app);
+require("./app/routes/api-routes.js")(app);
+
+db.sequelize.sync({ force: true }).then(function() {
+>>>>>>> master
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
