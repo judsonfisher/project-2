@@ -243,6 +243,10 @@ hr {
 	border: 1px solid black !important;
 }
 
+.comments {
+	margin-bottom: 70px;
+}
+
 .comment-section {
 	border: 1px solid black;
 }
