@@ -1,8 +1,6 @@
 // ALL OF THIS NEEDS WORK
 $(document).ready(function() {
 
-console.log("working");
-
   var date = new Date();
   console.log(date);
 
@@ -10,7 +8,7 @@ console.log("working");
   var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var dayOfWeek = weekday[date.getDay()];
   var dd = date.getDate();
-  var mm = date.getMonth() + 1;
+  var mm = date.getMonth();
   var month = year[mm];
   var yyyy = date.getFullYear();
   var today = dayOfWeek + " " + month + " " + dd + ", " + yyyy;
@@ -69,33 +67,125 @@ console.log("working");
       $("#humidity").append("Humidity: " + humidity + "%");
       $("#windSpeed").append("Wind: " + windSpeed + " mph");
       $("#visibility").append("Visibility: " + visibilityRounded + " mi");
-
-
-      
-
   });
 
+  $(".page-title").on("click", function() {
+    window.location.href = "/"
+  }); 
 
   // END OF HOME PAGE AJAX CALL
 
-var search = $("#newsInput");
- 
- $("#search").on("click", function() {
-  var searched = $("#newsInput").val().trim();
-  searched = searched.replace(/\s+/g, "").toLowerCase();
-  getData();
-});
+  // ==========================================================================
 
-function getData() {
- $.get("/api/articles", function(data) {
-    articles = data;
-    insertData();
+  // Begin routing calls
+
+  var nameInput = $("#firstName");
+  var commentInput = $("#comment");
+  var commentForm = $("#commenting");
+  var commentSection = $(".comments");
+  var updating = false;
+  var comments;
+  var commentId;
+  
+  showComments();
+
+  $(commentForm).on("submit", handleFormSubmit);
+  $(document).on("click", ".delete-button", handleCommentDelete);
+
+  function showComments() {
+     $.get("/api/comments", function(data) {
+      comments = data;
+      initializeRows();
+    });
+  };
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (!commentInput.val().trim() || !nameInput.val().trim()) {
+      return;
+    }
+
+    var newComment = {
+      name: nameInput
+        .val()
+        .trim(),
+      body: commentInput
+        .val()
+        .trim(),
+    };
+
+    $("#firstName").val("");
+    $("#comment").val("");
+
+    if (updating) {
+      newComment.id = commentId;
+      updateComment(newComment);
+    }
+    else {
+      submitComment(newComment);
+    }
+  };
+
+  function submitComment(post) {
+    $.post("/api/comments", post, function() {
+      window.location.href = "/article";
+    });
+  };  
+
+  function initializeRows() {
+    var commentsToAdd = [];
+    for (var i = 0; i < comments.length; i++) {
+      commentsToAdd.push(createNewRow(comments[i]));
+    }
+    commentSection.append(commentsToAdd);
+  }
+
+  function createNewRow(comments) {
+    console.log("Creating rows")
+
+    var newRow = $("<div>");
+    newRow.addClass("row");
+    var newCommentData = $("<div>");
+    newCommentData.addClass("comment-section col s8 offset-s2");
+    var userName = $("<p>");
+    userName.addClass("user-name");
+    var userComment = $("<p>");
+    userComment.addClass("user-comment");
+    var removeThis = $("<button>");
+    removeThis.addClass("delete-button");
+    removeThis.text("X");
+    var gap = $("<br>")
+    var gap2 = $("<br>")
+
+    userName.text(comments.name);
+    userComment.text(comments.body + "  ");
+
+    newRow.append(newCommentData);
+    newCommentData.append(userName);
+    userName.append(userComment);
+    userComment.append(removeThis);
+
+    newRow.data("comments", comments);
+
+    return newRow
+  };
+
+  function handleCommentDelete() {
+    event.preventDefault();
+    var currentComment = $(this).parent().parent().parent().parent().data("comments");
+    console.log(currentComment);
+    deleteComment(currentComment.id);
+  };
+
+  function deleteComment(id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/comments/" + id
+    })
+    .done(function() {
+      window.location.href = "/article";
+    });
+  };
+
+
   });
-};
-
-function insertData() {
- // Create code to insert titles/imgs into exisiting structures
-};
-
-
-});
