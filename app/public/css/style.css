@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .top-links {
 	text-align: right;
 }
@@ -204,6 +203,66 @@ hr {
 	font-weight: bold;
 }
 
+.title {
+	font-family: "Times New Roman";
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+.article-time {
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+
+.paragraph {
+	font-size: 20px;
+	font-family: "Times New Roman";
+}
+
+.user-input {
+	border: 1px solid black;
+
+}
+
+.leave-comment {
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "Times New Roman";
+}
+
+.name-input {
+	margin-bottom: 20px !important;
+}
+
+.submit-comment {
+	background-color: green !important;
+	margin-bottom: 15px;
+}
+
+.materialize-textarea {
+	border: 1px solid black !important;
+}
+
+.comment-section {
+	border: 1px solid black;
+}
+
+.user-name {
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "Times New Roman";
+}
+
+.user-comment {
+	font-family: "Times New Roman";
+}
+
+.comment-update {
+	font-family: "Times New Roman";
+	margin-right: 10px;
+
+}
+
 .page-footer {
 	background-color: #b5b6b7 !important;
 	border-top: solid 1px black;
@@ -235,5 +294,3 @@ hr {
 	font-family: "Times New Roman";
 	font-size: 17px;
 }
-=======
->>>>>>> bc0b1cfe945586ad8e19f60eaec76952eb789011
